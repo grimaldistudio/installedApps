@@ -66,7 +66,7 @@ public class InstalledApps extends CordovaPlugin {
                     json.put( "package", packageInfo.packageName );
                     json.put( "name", pm.getApplicationLabel( pm.getApplicationInfo( packageInfo.packageName, 0 )).toString() );
                     //json.put( "version", pm.getPackageInfo(this.cordova.getActivity().getPackageName(), 0).versionCode );
-                    json.put( "version", pm.getPackageInfo(packageInfo.packageName, 0).versionCode );
+                    json.put( "version", pm.getPackageInfo(packageInfo.packageName, 0).versionName );
                     res.add( json );
                 } catch (NameNotFoundException e) {}
 
